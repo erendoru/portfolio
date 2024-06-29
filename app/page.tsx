@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
 import { AnimatedPinDemo } from "@/components/Pin";
+import { LinkPreviewDemo } from "@/components/Preview";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         />
         <Hero />
         <Grid />
-
+        <LinkPreviewDemo />
         <AnimatedPinDemo />
       </div>
     </main>
