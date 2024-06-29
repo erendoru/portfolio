@@ -33,7 +33,7 @@ const Hero = () => {
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white-100">
             {" "}
-            Hi, I&apos;m Eren a Frontend Developer based in Turkey
+            Hi, I&apos;m Eren a Frontend Developer & maker based in Turkey
           </p>
           <a href="#about">
             <MagicButton
