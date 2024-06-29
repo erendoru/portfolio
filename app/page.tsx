@@ -3,9 +3,10 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
 import { LinkPreviewDemo } from "@/components/Preview";
-import { HeroParallax } from "@/components/ui/hero-parallax";
-import { projects } from "@/data";
+
 import { navItems } from "@/data";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const products = [];
@@ -17,8 +18,9 @@ export default function Home() {
         <Hero />
         <Grid />
         <LinkPreviewDemo />
-        <HeroParallax products={projects} />
-        <h1>sa</h1>
+        <Projects />
+
+        <Experience />
       </div>
     </main>
   );
