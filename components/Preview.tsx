@@ -5,7 +5,10 @@ import { LinkPreview } from "@/components/ui/link-preview";
 
 export function LinkPreviewDemo() {
   return (
-    <div className=" flex justify-center items-center  flex-col my-8">
+    <div
+      className=" flex justify-center items-center  flex-col my-8"
+      id="aboutme"
+    >
       <h1 className=" left-12 text-5xl mb-8 text-purple">ABOUT ME</h1>
       <p className="text-neutral-500 dark:text-neutral-400 text-xl max-w-3xl mx-auto">
         From the age of 7 to 19, I played ice hockey at the national team level.
