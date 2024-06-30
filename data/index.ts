@@ -189,7 +189,13 @@ export const navItems = [
       },
       {
         id: 4,
+        img: "whatsapp.svg",
+        link:"https://api.whatsapp.com/send/?phone=905538314101&text&type=phone_number&app_absent=0"
+      },
+      {
+        id: 5,
         img: "pdf.svg",
         link:"https://drive.google.com/file/d/1L_XLZypzT8A6sH2cjEmx0G2IZLa7DO8e/view?usp=drive_link"
       },
+
     ];
