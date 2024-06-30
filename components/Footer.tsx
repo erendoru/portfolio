@@ -15,16 +15,12 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-3xl lg:text-5xl"
-            words="Ready to take your digital presence to the next level?"
-          />
+      <div className="flex flex-col items-center ">
+        <h1 className="heading text-4xl lg:max-w-[45vw] dark:text-white text-black leading-snug tracking-wide font-bold text-center p-5">
+          Ready to <span className="text-purple">team up?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Reach out to me today and let&apos;s discuss how I can help.
         </p>
         <a href="mailto:erendoru@hotmail.com">
           <MagicButton
@@ -45,7 +41,7 @@ const Footer = () => {
               key={info.id}
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <Link rel="stylesheet" href={info.link}>
+              <Link rel="stylesheet" href={info.link} target="_blank">
                 <img src={info.img} alt="icons" width={20} height={20} />
               </Link>
             </div>
