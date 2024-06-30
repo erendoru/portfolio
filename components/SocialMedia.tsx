@@ -4,8 +4,8 @@ import React from "react";
 
 const SocialMedia = () => {
   return (
-    <div>
-      <div className="flex items-center justify-end md:gap-3 gap-6 my-5 ">
+    <div className="flex justify-center sm:justify-end">
+      <div className="flex items-center justify-end md:gap-3 gap-6 my-3">
         {socialMedia.map((info) => (
           <div
             key={info.id}
