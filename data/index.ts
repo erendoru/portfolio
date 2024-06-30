@@ -1,7 +1,9 @@
+
+
 export const navItems = [
-    { name: "About", link: "#about" },
+    { name: "About", link: "#aboutme" },
     { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Experience", link: "#testimonials" },
     { name: "Contact", link: "#contact" },
   ];
   
@@ -233,16 +235,24 @@ export const navItems = [
   ];
   
   export const socialMedia = [
-    {
-      id: 1,
-      img: "/git.svg",
-    },
-    {
-      id: 2,
-      img: "/twit.svg",
-    },
-    {
-      id: 3,
-      img: "/link.svg",
-    },
-  ];
+      {
+        id: 1,
+        img: "/git.svg",
+        link:"https://github.com/erendoru"
+      },
+      {
+        id: 2,
+        img: "/twit.svg",
+        link:"https://x.com/erend0ru"
+      },
+      {
+        id: 3,
+        img: "/link.svg",
+        link:"https://www.linkedin.com/in/eren-doru-196535116/"
+      },
+      {
+        id: 4,
+        img: "pdf.svg",
+        link:"https://drive.google.com/file/d/1L_XLZypzT8A6sH2cjEmx0G2IZLa7DO8e/view?usp=drive_link"
+      },
+    ];
