@@ -9,7 +9,7 @@ const Experience = () => {
         <div className=" text-center text-5xl ">
           <h1 className="heading">
             My
-            <span className="text-purple"> Work Experience</span>
+            <span className="text-purple"> Experiences</span>
           </h1>
         </div>
         <div className="w-full mt-12 grid lg:grid-cols-4 sm:grid-cols-1 gap-10 ">
