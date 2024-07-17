@@ -6,7 +6,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 export function LinkPreviewDemo() {
   return (
     <div
-      className=" flex justify-center items-center  flex-col my-8"
+      className=" flex justify-center items-center  mb-32 flex-col my-8"
       id="aboutme"
     >
       <h1 className=" left-12 text-5xl mb-8 text-purple">ABOUT ME</h1>
