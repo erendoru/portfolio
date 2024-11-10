@@ -5,7 +5,7 @@ import AnimatedButton from "./animated-button";
 
 const SocialMedia = () => {
   return (
-    <div className="flex justify-center sm:justify-end">
+    <div className="flex justify-center sm:justify-end mr-14">
       <div className="flex items-center justify-end md:gap-3 gap-6 my-3">
         <AnimatedButton />
         {socialMedia.map((info) => (
