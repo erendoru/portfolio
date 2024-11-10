@@ -20,7 +20,7 @@ export default function Home() {
         <Grid />
         <LinkPreviewDemo />
         {/* <Projects /> */}
-        <Experience />
+        {/* <Experience /> */}
         <Footer />
       </div>
     </main>
