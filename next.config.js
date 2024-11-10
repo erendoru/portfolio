@@ -13,6 +13,14 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true 
+  },
+  webpack: (config, { isServer }) => {
+    config.ignoreWarnings = [
+      { module: /@opentelemetry/ },
+      { module: /@sentry/ }
+    ];
+
+    return config;
   }
 }
 
