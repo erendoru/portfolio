@@ -16,7 +16,7 @@ const SocialMedia = () => {
           >
             <Link rel="stylesheet" href={info.link} target="_blank">
               <Image
-                src="/social-icon.png"
+                src={info.img}
                 alt="Social Media Icon"
                 width={24}
                 height={24}
