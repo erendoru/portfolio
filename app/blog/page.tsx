@@ -4,7 +4,6 @@ import { getPublishedBlogPosts } from "@/lib/notion";
 export default async function BlogPage() {
   const posts = await getPublishedBlogPosts();
 
-  // Tarih formatı için yardımcı fonksiyon
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Tarih belirtilmemiş";
     return new Date(dateString).toLocaleDateString("tr-TR", {
@@ -22,16 +21,13 @@ export default async function BlogPage() {
         </h1>
 
         <div className="flex gap-8">
-          {/* Sol Sidebar */}
           <div className="w-64 flex-shrink-0">
-            {/* Anasayfa Butonu */}
             <Link href="/">
               <button className="w-full mb-6 py-3 px-6 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm transition-colors duration-200 ease-in-out">
                 ← Anasayfa
               </button>
             </Link>
 
-            {/* Kategoriler */}
             <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Kategoriler
@@ -53,7 +49,6 @@ export default async function BlogPage() {
               </div>
             </div>
 
-            {/* Yıllara Göre Arşiv */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Arşiv
@@ -71,7 +66,6 @@ export default async function BlogPage() {
             </div>
           </div>
 
-          {/* Ana İçerik - Blog Listesi */}
           <div className="flex-1 ">
             <div className="space-y-4 ">
               {posts.map((post: any) => (
@@ -82,26 +76,21 @@ export default async function BlogPage() {
                   <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 cursor-pointer mt-8">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
-                        {/* Başlık */}
                         <h2 className="text-xl font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors">
                           {post.properties.Title.title[0].plain_text}
                         </h2>
 
-                        {/* Slug */}
                         <p className="text-sm text-gray-500 mb-3">
                           /{post.properties.Slug.rich_text[0].plain_text}
                         </p>
 
-                        {/* Alt Bilgiler */}
                         <div className="flex items-center gap-4 text-sm">
-                          {/* Tarih */}
                           <span className="text-gray-600">
                             {formatDate(
                               post.properties.PublishedAt?.date?.start
                             )}
                           </span>
 
-                          {/* Etiketler */}
                           <div className="flex gap-2">
                             {post.properties.Tags.multi_select.map(
                               (tag: any) => (
@@ -117,7 +106,6 @@ export default async function BlogPage() {
                         </div>
                       </div>
 
-                      {/* Sağ Ok İşareti */}
                       <div className="text-gray-400 hover:text-blue-600 transition-colors">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

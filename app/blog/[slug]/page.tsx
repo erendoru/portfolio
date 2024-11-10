@@ -37,7 +37,6 @@ export default async function BlogPost({
     console.log("Attempting to fetch post with slug:", params.slug);
     const post = await getSingleBlogPost(params.slug);
 
-    // Debug için post verisini yazdır
     console.log("Received post data:", JSON.stringify(post, null, 2));
 
     if (!post || !post.metadata || !post.metadata.Title) {
@@ -66,7 +65,7 @@ export default async function BlogPost({
 
               <Link href="/blog">
                 <button className="w-full mb-6 py-3 px-6 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm transition-colors duration-200 ease-in-out">
-                  ← Blog&apos;a Dön
+                  ← Blog Sayfasına Dön
                 </button>
               </Link>
 
@@ -148,8 +147,8 @@ export default async function BlogPost({
             Blog yazısı yüklenirken bir sorun oluştu.
           </p>
           <Link href="/blog">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded">
-              Blog&apos;a Dön
+            <button className="bg-[#a6acbb] hover:text-white text-white px-4 py-2 rounded">
+              Blog Sayfasına Dön
             </button>
           </Link>
         </div>
@@ -169,7 +168,7 @@ function BlogPostNotFound() {
           Aradığınız blog yazısı bulunamadı veya kaldırılmış olabilir.
         </p>
         <Link href="/blog">
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+          <button className="bg-[#a6acbb] hover:text-white text-white px-6 py-2 rounded-lg transition-colors">
             Blog Sayfasına Dön
           </button>
         </Link>
@@ -190,8 +189,8 @@ function BlogPostError() {
           deneyin.
         </p>
         <Link href="/blog">
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-            Blog Sayfasına Dönssss
+          <button className="bg-[#a6acbb] hover:text-white text-white px-6 py-2 rounded-lg transition-colors">
+            Blog Sayfasına Dön
           </button>
         </Link>
       </div>
