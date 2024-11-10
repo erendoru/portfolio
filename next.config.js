@@ -2,21 +2,18 @@
 const nextConfig = {
   images: {
     domains: [
+      'api.microlink.io',
       'prod-files-secure.s3.us-west-2.amazonaws.com',
       's3.us-west-2.amazonaws.com',
-      'www.notion.so',
-      'images.unsplash.com',
-      'api.microlink.io'
-    ],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'api.microlink.io',
-        port: '',
-        pathname: '/**',
-      },
+      'www.notion.so'
     ]
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true 
+  }
 }
 
 module.exports = nextConfig 

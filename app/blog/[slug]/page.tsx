@@ -69,10 +69,10 @@ export default async function BlogPost({
                 </button>
               </Link>
 
-              {/* Blog'a Dön Butonu */}
+              {/* Blog&apos;a Dön Butonu */}
               <Link href="/blog">
                 <button className="w-full mb-6 py-3 px-6 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm transition-colors duration-200 ease-in-out">
-                  ← Blog'a Dön
+                  ← Blog&apos;a Dön
                 </button>
               </Link>
 

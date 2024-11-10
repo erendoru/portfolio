@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
@@ -82,9 +83,10 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center "} h-full `}>
         <div className="w-full h-full absolute ">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
+              fill
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -95,10 +97,11 @@ export const BentoGridItem = ({
           } `}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
-              className="object-cover object-center w-full h-full"
+              fill
+              className="object-cover"
             />
           )}
         </div>
