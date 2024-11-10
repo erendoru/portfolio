@@ -25,12 +25,12 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[80vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-3xl md:text-4xl lg:text-5xl text-center mb-8"
             words="Transforming Concepts into Seamless User Experiences"
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white-100">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-xl text-white-100">
             {" "}
-            Hi, I&apos;m Eren a Developer & Maker based in Turkey.
+            Hi I&apos;m Eren, a Developer & Maker based in Turkey.
           </p>
           <a href="#projects">
             <MagicButton
