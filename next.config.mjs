@@ -4,6 +4,10 @@ const nextConfig = { images: {
     domains: [
       "api.microlink.io", 
     ],
+  },
+  env: {
+    NOTION_TOKEN: process.env.NOTION_TOKEN,
+    NOTION_DATABASE_ID: process.env.NOTION_DATABASE_ID,
   },};
 
 export default withSentryConfig(nextConfig, {
