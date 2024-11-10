@@ -3,7 +3,6 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 
-// Tip tanımlamaları
 interface NotionTag {
   id: string;
   name: string;
@@ -46,13 +45,11 @@ export default async function BlogPost({
       return <BlogPostNotFound />;
     }
 
-    // Tarih formatı için yardımcı fonksiyon
     const formatDate = (dateString?: string) => {
       if (!dateString) return "Tarih belirtilmemiş";
       return new Date(dateString).toLocaleDateString("tr-TR");
     };
 
-    // Görsel URL'sini kontrol et
     const hasImage = post.metadata.Image && post.metadata.Image.url;
     console.log("Has image:", hasImage, "Image URL:", post.metadata.Image?.url);
 
@@ -60,23 +57,19 @@ export default async function BlogPost({
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="flex gap-8">
-            {/* Sol Sidebar */}
             <div className="w-64 flex-shrink-0">
-              {/* Anasayfa Butonu */}
               <Link href="/">
                 <button className="w-full mb-4 py-3 px-6 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm transition-colors duration-200 ease-in-out">
                   ← Anasayfa
                 </button>
               </Link>
 
-              {/* Blog&apos;a Dön Butonu */}
               <Link href="/blog">
                 <button className="w-full mb-6 py-3 px-6 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl shadow-sm transition-colors duration-200 ease-in-out">
                   ← Blog&apos;a Dön
                 </button>
               </Link>
 
-              {/* Yazı Bilgileri */}
               <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
                 <h2 className="text-lg font-semibold text-gray-800 mb-4">
                   Yazı Bilgileri
@@ -113,16 +106,13 @@ export default async function BlogPost({
               </div>
             </div>
 
-            {/* Ana İçerik */}
             <div className="flex-1">
               <article className="bg-white rounded-xl shadow-sm p-8">
-                {/* Başlık */}
                 <h1 className="text-4xl font-bold text-gray-800 mb-6">
                   {post.metadata.Title?.title?.[0]?.plain_text ||
                     "Başlıksız Yazı"}
                 </h1>
 
-                {/* Kapak Görseli */}
                 {hasImage && (
                   <div className="relative w-full h-[400px] mb-8 rounded-xl overflow-hidden">
                     <Image
@@ -139,7 +129,6 @@ export default async function BlogPost({
                   </div>
                 )}
 
-                {/* İçerik */}
                 <div className="prose prose-lg max-w-none">
                   <MDXRemote source={post.markdown} />
                 </div>
@@ -150,12 +139,25 @@ export default async function BlogPost({
       </div>
     );
   } catch (error) {
-    console.error("Error rendering blog post:", error);
-    return <BlogPostError />;
+    console.error("Blog post error:", error);
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Bir hata oluştu</h1>
+          <p className="text-gray-600 mb-4">
+            Blog yazısı yüklenirken bir sorun oluştu.
+          </p>
+          <Link href="/blog">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">
+              Blog&apos;a Dön
+            </button>
+          </Link>
+        </div>
+      </div>
+    );
   }
 }
 
-// Ayrı komponentler olarak hata durumlarını tanımlayalım
 function BlogPostNotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white p-8">
