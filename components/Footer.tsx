@@ -44,10 +44,10 @@ const Footer = () => {
             >
               <Link rel="stylesheet" href={info.link} target="_blank">
                 <Image
-                  src="/logo.png"
+                  src={info.img}
                   alt="Logo"
-                  width={100}
-                  height={100}
+                  width={24}
+                  height={24}
                   className="your-classes"
                 />
               </Link>
